@@ -168,3 +168,4 @@ cython_debug/
 !poetry.lock
 !pyproject.toml
 !.flake8
+__init__.py
