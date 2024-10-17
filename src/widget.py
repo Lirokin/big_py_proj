@@ -1,4 +1,3 @@
-from os.path import split
 from typing import Optional
 from src.masks import get_mask_card_number
 
