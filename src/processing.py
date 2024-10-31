@@ -1,6 +1,9 @@
+# модуль processing содержит функции обработки данных
+
 from typing import Any
 
-def filter_by_state (list_dict: list[dict[str,Any]], def_state: str = 'EXECUTED') -> list[dict[str,Any]]:
+
+def filter_by_state(list_dict: list[dict[str, Any]], def_state: str = 'EXECUTED') -> list[dict[str, Any]]:
     '''Функция возвращает новый список словарей, содержащий только те словари, у которых ключ
     state соответствует указанному значению '''
     new_list_dict = []
@@ -10,7 +13,7 @@ def filter_by_state (list_dict: list[dict[str,Any]], def_state: str = 'EXECUTED'
     return new_list_dict
 
 
-def sort_by_date (list_dict: list[dict[str,Any]], def_state: bool = True) -> list[dict[str,Any]]:
+def sort_by_date(list_dict: list[dict[str, Any]], def_state: bool = True) -> list[dict[str, Any]]:
     '''Функция принимает список словарей и необязательный параметр, задающий порядок сортировки
     (по умолчанию — убывание). Функция должна возвращать новый список, отсортированный по дате'''
     return sorted(list_dict, key=lambda dict_id: dict_id.get('date'), reverse=def_state)
