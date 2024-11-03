@@ -8,6 +8,8 @@ def get_mask_card_number(card_number: Optional[str] = None) -> Optional[str]:
     block_size = 4
     hidden_number = ""
     hide_number = [6, 7, 8, 9, 10, 11]
+    if card_number == None:
+        return None
     for i, char in enumerate(card_number):
         if i in hide_number:
             hidden_number += "*"
@@ -23,6 +25,8 @@ def get_mask_account(account_number: Optional[str] = None) -> Optional[str]:
     и возвращает маску номера по правилу **XXXX"""
     hidden_number = ""
     hide_number = [0, 1]
+    if account_number == None:
+        return None
     for i, char in enumerate(account_number[-6:]):
         if i in hide_number:
             hidden_number += "*"
